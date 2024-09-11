@@ -62,6 +62,62 @@ const fonts = {
       letterSpacing: '0.25px',
     },
   ],
+  'largetitle-l': [
+    '34px',
+    {
+      lineHeight: '48px',
+      letterSpacing: '1px',
+    },
+  ],
+  'largetitle-m': [
+    '33px',
+    {
+      lineHeight: '40px',
+      letterSpacing: '1px',
+    },
+  ],
+  'largetitle-s': [
+    '32px',
+    {
+      lineHeight: '34px',
+      letterSpacing: '1px',
+    },
+  ],
+  'largetitle-xs': [
+    '31px',
+    {
+      lineHeight: '32px',
+      letterSpacing: '1px',
+    },
+  ],
+  'l-regular': [
+    '34px',
+    {
+      lineHeight: '48px',
+      letterSpacing: '1px',
+    },
+  ],
+  'm-regular': [
+    '33px',
+    {
+      lineHeight: '40px',
+      letterSpacing: '1px',
+    },
+  ],
+  's-regular': [
+    '32px',
+    {
+      lineHeight: '34px',
+      letterSpacing: '1px',
+    },
+  ],
+  'xs-regular': [
+    '31px',
+    {
+      lineHeight: '32px',
+      letterSpacing: '1px',
+    },
+  ],
 };
 
 export { fonts };
