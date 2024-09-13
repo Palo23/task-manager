@@ -1,6 +1,6 @@
 import { TopNavigationBar } from '@/components';
 
-const TaskManager = () => {
+const TaskView = () => {
   return (
     <>
       <TopNavigationBar />
@@ -8,4 +8,4 @@ const TaskManager = () => {
   );
 };
 
-export { TaskManager };
+export { TaskView };
