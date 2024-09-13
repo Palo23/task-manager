@@ -7,3 +7,9 @@
   line-height: 1.5;
   font-weight: 400;
 }
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
