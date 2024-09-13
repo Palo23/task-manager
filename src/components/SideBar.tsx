@@ -12,7 +12,7 @@ interface SideBarProps {
 
 const SideBar = ({ items, activeElement, setActive, className }: SideBarProps) => {
   return (
-    <div className={cx('h-screen bg-neutral-4 rounded-3xl w-full', className)}>
+    <div className={cx('h-full bg-neutral-4 rounded-3xl w-full', className)}>
       <div className="flex flex-row justify-center items-center p-6">
         <img src={Images.logo} alt="RAVN Logo" className="w-10 h-10" />
       </div>
