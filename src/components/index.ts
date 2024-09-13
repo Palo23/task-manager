@@ -4,5 +4,7 @@ export * from './InputClear';
 export * from './NavigationBar';
 export * from './SideBar';
 export * from './SideBarItem';
+export * from './Tag';
+export * from './TaskViewHeader';
 export * from './TopNavigationBar';
 export * from './ui';
