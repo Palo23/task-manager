@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { NotFound, TaskManager } from '../pages';
+import { NotFound, TaskManager, TaskView } from '../pages';
+import { MainLayout } from '@/layout';
 
 function RoutesProvider() {
   const router = createBrowserRouter([
@@ -9,7 +10,17 @@ function RoutesProvider() {
     },
     {
       path: '/',
-      element: <TaskManager />,
+      element: <MainLayout />,
+      children: [
+        {
+          path: '/',
+          element: <TaskManager />,
+        },
+        {
+          path: '/my-tasks',
+          element: <TaskView />,
+        },
+      ],
     },
   ]);
 
