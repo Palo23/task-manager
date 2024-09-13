@@ -26,7 +26,8 @@ const SideBarItem = ({ icon, label, redirect, onClick, active = false, className
     <li
       onClick={handleClick}
       className={cx(
-        `cursor-pointer flex flex-row items-center pl-3 gap-4 py-4 ${active ? 'bg-li-gradient border-r-2 border-primary-4' : ''}`,
+        'cursor-pointer flex flex-row items-center pl-3 gap-4 py-4',
+        active ? 'bg-li-gradient border-r-2 border-primary-4' : '',
         className
       )}
     >

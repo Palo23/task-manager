@@ -1,32 +1,16 @@
 import { Images } from '@/lib';
 import { cx } from 'class-variance-authority';
-import { IoGridOutline } from 'react-icons/io5';
-import { IoIosMenu } from 'react-icons/io';
-import { useState } from 'react';
 import { SideBarItem } from './SideBarItem';
+import { Menu } from '@/types';
 
 interface SideBarProps {
+  items: Menu[];
+  activeElement: number;
+  setActive: (id: number) => void;
   className?: string;
 }
 
-const menuItems = [
-  {
-    id: 1,
-    icon: <IoGridOutline />,
-    label: 'DASHBOARD',
-    redirect: '/',
-  },
-  {
-    id: 2,
-    icon: <IoIosMenu />,
-    label: 'MY TASK',
-    redirect: '/my-tasks',
-  },
-];
-
-const SideBar = ({ className }: SideBarProps) => {
-  const [active, setActive] = useState(1);
-
+const SideBar = ({ items, activeElement, setActive, className }: SideBarProps) => {
   return (
     <div className={cx('h-screen bg-neutral-4 rounded-3xl w-full', className)}>
       <div className="flex flex-row justify-center items-center p-6">
@@ -34,13 +18,13 @@ const SideBar = ({ className }: SideBarProps) => {
       </div>
 
       <ul>
-        {menuItems.map((item) => (
+        {items.map((item) => (
           <SideBarItem
             key={item.id}
             icon={item.icon}
             redirect={item.redirect}
             label={item.label}
-            active={active === item.id}
+            active={activeElement === item.id}
             onClick={() => setActive(item.id)}
           />
         ))}
