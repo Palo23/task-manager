@@ -8,7 +8,7 @@ import { AvatarComponent, InputClear } from '.';
 const TopNavigationBar = () => {
   const [value, setValue] = useState('');
   return (
-    <div className="flex flex-row items-center justify-between bg-neutral-4 rounded-2xl py-2 px-3 gap-4">
+    <div className="flex flex-row items-center justify-between bg-neutral-4 rounded-2xl py-3 px-3 gap-4">
       <CiSearch color={colors['neutral-2']} size={24} />
       <InputClear
         value={value}
