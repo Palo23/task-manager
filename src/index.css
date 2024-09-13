@@ -8,6 +8,10 @@
   font-weight: 400;
 }
 
+body {
+  @apply bg-neutral-5;
+}
+
 @layer base {
   :root {
     --radius: 0.5rem;
