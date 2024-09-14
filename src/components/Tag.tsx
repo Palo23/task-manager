@@ -9,15 +9,29 @@ interface TagProps {
   className?: string;
 }
 
+const borderClasses = {
+  'neutral-1': 'border-neutral-1',
+  'secondary-4': 'border-secondary-4',
+  'tertiary-4': 'border-tertiary-4',
+  'primary-4': 'border-primary-4',
+};
+
+const textClasses = {
+  'neutral-1': 'text-neutral-1',
+  'secondary-4': 'text-secondary-4',
+  'tertiary-4': 'text-tertiary-4',
+  'primary-4': 'text-primary-4',
+};
+
 const Tag = ({ label, type, icon, className }: TagProps) => {
   return (
-    <div className={cx('flex flex-row items-center gap-2 px-2 py-1 rounded-2xl', `bg-${type}`, className)}>
+    <div className={cx('bg-[#94979A1A] flex flex-row items-center gap-2 px-2 py-1 rounded-md', borderClasses[type], className)}>
       {icon &&
         React.cloneElement(icon, {
           color: colors[type],
           size: 18,
         })}
-      <span className={`text-${type} font-semibold text-sm`}>{label}</span>
+      <span className={`${textClasses[type]} font-semibold text-sm`}>{label}</span>
     </div>
   );
 };

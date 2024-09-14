@@ -4,11 +4,12 @@ interface AvatarImageProps {
   src: string;
   alt: string;
   className?: string;
+  avatarClassName?: string;
 }
 
-const AvatarComponent = ({ src, alt, className }: AvatarImageProps) => {
+const AvatarComponent = ({ src, alt, className, avatarClassName }: AvatarImageProps) => {
   return (
-    <Avatar>
+    <Avatar className={avatarClassName}>
       <AvatarImage src={src} alt={alt} className={className} />
       <AvatarFallback>{alt}</AvatarFallback>
     </Avatar>

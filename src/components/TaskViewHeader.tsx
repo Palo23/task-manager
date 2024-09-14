@@ -15,7 +15,7 @@ const TaskViewHeader = () => {
       className: 'min-w-[140px]',
     },
     {
-      label: 'Estimate',
+      label: 'Task Assign Name',
       className: 'min-w-[159px]',
     },
     {

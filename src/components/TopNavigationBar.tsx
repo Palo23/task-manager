@@ -20,7 +20,7 @@ const TopNavigationBar = () => {
         }}
       />
       <CgBell color={colors['neutral-2']} size={24} />
-      <AvatarComponent src={Images.avatar} alt="RV" className="object-cover h-10 w-10" />
+      <AvatarComponent src={Images.avatar} alt="RV" avatarClassName="object-cover h-10 w-10" />
     </div>
   );
 };
