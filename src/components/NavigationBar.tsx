@@ -1,9 +1,9 @@
 import { colors } from '@/styles';
 import { Menu } from '@/types';
 import { cx } from 'class-variance-authority';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button } from '.';
+import { Button, FormDialog, TaskForm } from '.';
 import { GoPlus } from 'react-icons/go';
 
 interface NavigationBarProps {
@@ -14,6 +14,7 @@ interface NavigationBarProps {
 }
 
 const NavigationBar = ({ items, activeElement, setActive, className }: NavigationBarProps) => {
+  const [openDialog, setOpenDialog] = useState(false);
   const navigate = useNavigate();
 
   const handleClick = (item: Menu) => {
@@ -43,9 +44,13 @@ const NavigationBar = ({ items, activeElement, setActive, className }: Navigatio
           .reverse()}
       </div>
 
-      <Button variant={'primary'} size={'icon'}>
+      <Button variant={'primary'} size={'icon'} onClick={() => setOpenDialog(true)}>
         <GoPlus color={colors['neutral-1']} />
       </Button>
+
+      <FormDialog open={openDialog} onClose={() => setOpenDialog(false)}>
+        <TaskForm handleSubmit={() => setOpenDialog(false)} handleCancel={() => setOpenDialog(false)} />
+      </FormDialog>
     </div>
   );
 };

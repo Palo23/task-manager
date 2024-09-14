@@ -1,5 +1,6 @@
 export * from './AvatarComponent';
 export * from './ErrorBoundary';
+export * from './FormDialog';
 export * from './InputClear';
 export * from './NavigationBar';
 export * from './SideBar';
@@ -8,6 +9,7 @@ export * from './Tag';
 export * from './TaskAccordion';
 export * from './TaskCard';
 export * from './TaskColumn';
+export * from './TaskForm';
 export * from './TaskRow';
 export * from './TaskTags';
 export * from './TaskViewHeader';
