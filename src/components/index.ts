@@ -6,6 +6,8 @@ export * from './SideBar';
 export * from './SideBarItem';
 export * from './Tag';
 export * from './TaskAccordion';
+export * from './TaskCard';
+export * from './TaskColumn';
 export * from './TaskRow';
 export * from './TaskTags';
 export * from './TaskViewHeader';

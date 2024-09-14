@@ -25,13 +25,20 @@ const textClasses = {
 
 const Tag = ({ label, type, icon, className }: TagProps) => {
   return (
-    <div className={cx('bg-[#94979A1A] flex flex-row items-center gap-2 px-2 py-1 rounded-md', borderClasses[type], className)}>
+    <div
+      className={cx(
+        'bg-[#94979A1A] flex flex-row items-center gap-2 px-2 py-1 rounded-md',
+        borderClasses[type],
+        icon ? 'justify-start' : 'justify-center',
+        className
+      )}
+    >
       {icon &&
         React.cloneElement(icon, {
           color: colors[type],
           size: 18,
         })}
-      <span className={`${textClasses[type]} font-semibold text-sm`}>{label}</span>
+      <span className={`${textClasses[type]} font-semibold text-body-m text-center`}>{label}</span>
     </div>
   );
 };
