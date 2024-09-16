@@ -1,50 +1,141 @@
-# React + TypeScript + Vite
+# Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a web application built with **React**, **Vite**, **TypeScript**, **Tailwind CSS**, and **shadcn**. It is designed to be fast, modular, and easy to customize.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: JavaScript library for building user interfaces.
+- **Vite**: A fast and modern bundler.
+- **TypeScript**: A statically typed superset of JavaScript.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **shadcn**: Pre-built UI components for React applications.
+- **pnpm**: A fast and efficient package manager.
+- **Node.js**: JavaScript runtime environment.
 
-## Expanding the ESLint configuration
+## Requirements
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Node.js** (version 20.11.0)
+- **pnpm** (version 9.1.4)
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+First, clone the repository:
+
+```bash
+git clone https://github.com/Palo23/task-manager.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Navigate to the app:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```bash
+cd ravn-challange
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Install dependencies
+
+```bash
+pnpm install
+```
+
+Run in development mode
+
+```bash
+pnpm run dev
+```
+
+## Screenshots
+
+![Task Default View](assets/screenshots/task.png)
+![Dashboard Default View](assets/screenshots/dashboard.png)
+
+## Project Structure
+
+```
+└── 📁ravn-challenge
+    └── 📁public
+        └── 📁images
+    └── 📁src
+        └── 📁assets
+        └── 📁components
+            └── 📁ui
+                └── accordion.tsx
+                └── avatar.tsx
+                └── button.tsx
+                └── calendar.tsx
+                └── card.tsx
+                └── combobox.tsx
+                └── command.tsx
+                └── date-picker.tsx
+                └── dialog.tsx
+                └── index.ts
+                └── input-popover.tsx
+                └── input.tsx
+                └── popover.tsx
+                └── table-title.tsx
+                └── task-view-theader.tsx
+            └── AvatarComponent.tsx
+            └── ErrorBoundary.tsx
+            └── FormDialog.tsx
+            └── index.ts
+            └── InputClear.tsx
+            └── NavigationBar.tsx
+            └── SideBar.tsx
+            └── SideBarItem.tsx
+            └── Tag.tsx
+            └── TaskAccordion.tsx
+            └── TaskCard.tsx
+            └── TaskColumn.tsx
+            └── TaskForm.tsx
+            └── TaskRow.tsx
+            └── TaskTags.tsx
+            └── TaskViewHeader.tsx
+            └── TopNavigationBar.tsx
+        └── 📁layout
+            └── index.ts
+            └── MainLayout.tsx
+        └── 📁lib
+            └── constants.ts
+            └── index.ts
+            └── utils.ts
+        └── 📁pages
+            └── index.ts
+            └── NotFound.tsx
+            └── TaskManager.tsx
+            └── TaskView.tsx
+        └── 📁providers
+            └── index.ts
+            └── RouterProvider.tsx
+        └── 📁services
+        └── 📁styles
+            └── colors.ts
+            └── fonts.ts
+            └── index.ts
+        └── 📁types
+            └── add-task.d.ts
+            └── index.ts
+            └── menu.d.ts
+            └── tag.d.ts
+            └── task.d.ts
+            └── user.d.ts
+        └── index.css
+        └── main.tsx
+        └── vite-env.d.ts
+    └── .DS_Store
+    └── .env
+    └── .env.example
+    └── .gitignore
+    └── .prettierignore
+    └── .prettierrc
+    └── components.json
+    └── eslint.config.js
+    └── index.html
+    └── package.json
+    └── pnpm-lock.yaml
+    └── postcss.config.js
+    └── README.md
+    └── tailwind.config.js
+    └── tsconfig.app.json
+    └── tsconfig.json
+    └── tsconfig.node.json
+    └── vite.config.ts
 ```
