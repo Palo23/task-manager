@@ -163,7 +163,7 @@ const TaskForm = ({ handleSubmit, handleCancel, className }: TaskFormProps) => {
           </div>
 
           <div className="flex flex-row justify-end items-center gap-2 mt-4">
-            <Button type="submit" variant={'outline'} size={'lg'} onClick={handleCancel}>
+            <Button type="submit" variant={'outline'} size={'lg'} onClick={handleCancel} className="text-neutral-1">
               Cancel
             </Button>
             <Button type="submit" variant={'primary'} size={'lg'}>
