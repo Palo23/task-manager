@@ -2,6 +2,7 @@ export * from './AvatarComponent';
 export * from './ErrorBoundary';
 export * from './FormDialog';
 export * from './InputClear';
+export * from './NavTabs';
 export * from './NavigationBar';
 export * from './SideBar';
 export * from './SideBarItem';
