@@ -1,4 +1,4 @@
-import { NavigationBar, SideBar, TopNavigationBar } from '@/components';
+import { NavigationBar, SideBar, TopNavigationBar, NavTabs } from '@/components';
 import { Menu } from '@/types';
 import { useState } from 'react';
 import { IoIosMenu } from 'react-icons/io';
@@ -24,7 +24,7 @@ const MainLayout = () => {
   ];
 
   return (
-    <div className="w-full h-screen p-6">
+    <div className="relative w-full h-screen p-6">
       <div className="flex flex-row gap-4 h-full">
         <div className="hidden md:flex md:w-1/3 lg:w-1/4">
           <SideBar items={menuItems} activeElement={active} setActive={setActive} />
@@ -37,6 +37,10 @@ const MainLayout = () => {
             <Outlet />
           </div>
         </div>
+      </div>
+
+      <div className="fixed bottom-0 w-screen flex md:hidden">
+        <NavTabs />
       </div>
     </div>
   );
