@@ -20,8 +20,8 @@ const DatePicker = ({ value, onChange }: DatePickerProps) => {
           variant={'outline'}
           className={cn('justify-start text-left font-normal text-neutral-1 border-0 bg-[#94979A1A]', !value && 'text-muted-foreground')}
         >
-          <CalendarIcon className="mr-2 h-4 w-4" />
-          {value ? format(value, 'PPP') : <span>Pick a date</span>}
+          <CalendarIcon className="mr-2 h-4 w-4 text-neutral-1" />
+          {value ? format(value, 'PPP') : <span className="text-neutral-1">Pick a date</span>}
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0">

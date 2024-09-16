@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { ChevronsUpDown, Command } from 'lucide-react';
+import { ChevronsUpDown } from 'lucide-react';
 
-import { Button, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, Popover, PopoverContent, PopoverTrigger } from '.';
+import { Button, Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList, Popover, PopoverContent, PopoverTrigger } from '.';
 
 interface ComboBoxProps {
   options: { label: string; value: string }[];
@@ -21,7 +21,7 @@ const ComboBox = ({ options, title, icon, onChange }: ComboBoxProps) => {
           {value ? (
             options.find((option) => option.value === value)?.label
           ) : (
-            <div className="flex items-center">
+            <div className="flex items-center text-neutral-1">
               {icon && icon}
               {`Select ${title}...`}
             </div>
@@ -33,7 +33,7 @@ const ComboBox = ({ options, title, icon, onChange }: ComboBoxProps) => {
         <Command>
           <CommandInput placeholder={`Search ${title}`} />
           <CommandList>
-            <CommandEmpty>No ${title?.toLowerCase()} found.</CommandEmpty>
+            <CommandEmpty>No {title?.toLowerCase()} found.</CommandEmpty>
             <CommandGroup>
               {options.map((option) => (
                 <CommandItem
@@ -45,7 +45,7 @@ const ComboBox = ({ options, title, icon, onChange }: ComboBoxProps) => {
                     setOpen(false);
                   }}
                 >
-                  {icon && icon}
+                  {/* {icon && icon} */}
                   {option.label}
                 </CommandItem>
               ))}

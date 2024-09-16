@@ -15,7 +15,7 @@ interface InputPopoverProps {
 const InputPopover = ({ value, onChange, title, icon, placeholder, className }: InputPopoverProps) => {
   return (
     <Popover>
-      <PopoverTrigger className="flex flex-row items-center p-2 rounded-md gap-2 border-0 bg-[#94979A1A]">
+      <PopoverTrigger className="flex flex-row items-center p-2 rounded-md gap-2 border-0 bg-[#94979A1A] text-neutral-1">
         {icon && icon}
         {title}
       </PopoverTrigger>
@@ -24,7 +24,7 @@ const InputPopover = ({ value, onChange, title, icon, placeholder, className }: 
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
-          className={cx('w-full py-5 border-neutral-1 border z-[9999] bg-neutral-4', className)}
+          className={cx('w-full py-5 border-neutral-1 border z-[9999] bg-neutral-4 text-neutral-1', className)}
         />
       </PopoverContent>
     </Popover>
