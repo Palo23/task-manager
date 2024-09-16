@@ -11,4 +11,5 @@ export * from './input-popover';
 export * from './input';
 export * from './popover';
 export * from './table-title';
+export * from './tabs';
 export * from './task-view-theader';
